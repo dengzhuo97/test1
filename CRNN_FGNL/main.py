@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-
+####			mobvoi仓库修改测试
+#zhuo.deng		22/2/16
 import os
 os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 import pandas as pd
@@ -30,7 +31,8 @@ if __name__ == '__main__':
 	'''
 	song_folders = ['melspectrum_artist20_origin', 'melspectrum_artist20_vocal']
 	split_methods = ['album']
-	slice_lengths = [94, 157, 313]
+	# slice_lengths = [94, 157, 313]
+	slice_lengths = [94]		###将歌曲的melspecturm切割成每段3s
 	random_state_list = [0, 21, 42]
 	train_bool = True;
 	for split_method in split_methods:
@@ -112,3 +114,4 @@ if __name__ == '__main__':
 				pd.DataFrame(f1_pooling_scores).to_csv(
 					'{}/{}_f1_pooled_score.csv'.format(
 						summary_metrics_output_folder, slice_len))
+####mobvoi仓库修改测试
